@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/dist/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | [Blogr]</title>
+
+</head>
+<body>
+
+  <header class="header">
+    <nav class="header__nav flex flex-jc-sb flex-ai-c hide-for-destop">
+      <!-- destop nav start-->
+      <div class="header__nav-left ">
+        <ul class = "dropdown_menu flex flex-jc-sb flex-ai-c">
+          <li>
+            <p>Blogr</p>
+          </li>
+
+          <li>
+            <a class="destop-btns" ghref="/">Product</a><i><svg class="d-menu-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></i>
+              <ul class = "submenu">
+                <li><a href="/">Overview</a></li>
+                <li><a href="/">Pricing</a></li>
+                <li><a href="/">Marketplace</a></li>
+                <li><a href="/">Features</a></li>
+                <li><a href="/">Integrations</a></li>
+              </ul>
+          </li>
+
+          <li>
+            <a class="destop-btns" ghref="/">Company</a><i><svg class="d-menu-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></i>
+              <ul class = "submenu">
+                <li><a href="/">About</a></li>
+                <li><a href="/">Team</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/">Careers</a></li>
+              </ul>   
+          </li>
+
+          <li>
+            <a class="destop-btns" ghref="/">Connect</a><i><svg class="d-menu-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></i>
+              <ul class = "submenu">
+                <li><a href="/">Contact</a></li>
+                <li><a href="/">Newsletter</a></li>
+                <li><a href="/">LinkedIn</a></li>
+              </ul>
+          </li>
+
+        </ul>
+      </div>
+
+        <div class="header__nav-right">
+          <a class="header__btn-log" href="/">Login</a>
+          <a class="header__btn-sign" href="/">Sign Up</a>
+          </div>
+    </nav>  
+
+    <!-- destop nav end-->
+
+    <!-- mobile nav start-->
+    <div class="mobile-menu hide-for-mobile">
+      <div>
+        <nav class="mobile-menu__top flex flex-jc-sb flex-ai-c" >
+          <p>Blogr</p>
+            <a id="mobile-toggle" href="/">
+              <svg width="32" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/></g></svg>
+            </a>
+        </nav>
+      </div>
+      <div class="for-position">
+        <nav class ="mobile-menu__dropdown">
+          <ul>
+         
+            <li>
+              <a class="mobile-menu-buttons" href="/">Product<i><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></i></a>
+                <ul  class = "mobile-menu__submenu">
+                  <li><a href="/">Overview</a></li>
+                  <li><a href="/">Pricing</a></li>
+                  <li><a href="/">Marketplace</a></li>
+                  <li><a href="/">Features</a></li>
+                  <li><a href="/">Integrations</a></li>
+                </ul>
+            </li>
+
+            <li>
+              <a class="mobile-menu-buttons" href="/">Company<i><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></i></a>
+                      
+                <ul class = "mobile-menu__submenu">
+                  <li><a href="/">About</a></li>
+                  <li><a href="/">Team</a></li>
+                  <li><a href="/">Blog</a></li>
+                  <li><a href="/">Careers</a></li>
+                </ul>  
+            </li>
+
+            <li>
+              <a class="mobile-menu-buttons" href="/">Connect<i><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></i></a>
+                <ul class = "mobile-menu__submenu">
+                  <li><a href="/">Contact</a></li>
+                  <li><a href="/">Newsletter</a></li>
+                  <li><a href="/">LinkedIn</a></li>
+                </ul>
+            </li>
+
+            <!-- horizontal Line-->
+            <div>
+              <span></span>
+            </div>
+
+            <li>
+              <a class="mobile-menu__btn-log" href="/">Login</a>
+            </li>
+            <li>
+              <a class="mobile-menu__btn-sign" href="/">Sign Up</a>
+            </li>
+          
+          </ul>
+        </nav>  
+      </div>
+    </div>
+    <!-- mobile nav end-->
+
+    <!-- hero -->
+    <div class="hero flex flex-jc-c flex-ai-c">
+      <h1>A modern publishing platform</h1>
+      <p>Grow your audience and build your online brand</p>
+      <div class="hero__btns">
+        <a class="hero__btn-start" href="/">Start for Free</a>
+        <a class="hero__btn-more" href="/">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- First Section Start-->
+  <section class="main-section">
+      <h2>Designed for the future</h2>
+    </div>
+    <div class="main-section__content flex flex-jc-sb flex-ai-c">
+    
+    <div class="main-section__right-mobile hide-for-mobile"></div> <!--Div for backgorund mobile image-->
+  
+      <div class="main-section__left">
+      <h3>
+        Introducing an extensible editor
+      </h3>
+      <p>
+        Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+  change the looks of a blog.
+      </p>
+      <h3>
+        Robust content management
+      </h3>
+      <p>
+        Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+      </p>
+    </div>
+
+  <div class="main-section__right">
+      <!-- <svg width="925" height="882" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient x1="0%" y1="27.881%" x2="100%" y2="72.119%" id="c"><stop stop-color="#FF8F71" offset="0%"/><stop stop-color="#FF3E55" offset="100%"/></linearGradient><linearGradient x1="0%" y1="41.725%" x2="100%" y2="58.275%" id="e"><stop stop-color="#FF8F71" offset="0%"/><stop stop-color="#FF3E55" offset="100%"/></linearGradient><filter x="-10.9%" y="-11.7%" width="121.8%" height="132.8%" filterUnits="objectBoundingBox" id="b"><feOffset dy="20" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0.421821759 0 0 0 0 0.554338424 0 0 0 0 0.893710371 0 0 0 0.243444056 0" in="shadowBlurOuter1"/></filter><rect id="a" x="0" y="0" width="642" height="427" rx="15"/></defs><g transform="translate(40)" fill="none" fill-rule="evenodd"><rect fill="#2D2E40" opacity=".08" transform="matrix(1 0 0 -1 0 890)" x="145" y="144" width="600" height="602" rx="300"/><rect stroke="#2D2E40" opacity=".5" transform="matrix(1 0 0 -1 0 882)" x="105.5" y="100.5" width="679" height="681" rx="339.5"/><rect stroke="#2D2E40" opacity=".25" transform="matrix(1 0 0 -1 0 882)" x="5.5" y=".5" width="879" height="881" rx="439.5"/><g transform="translate(0 242)"><mask id="d" fill="#fff"><use xlink:href="#a"/></mask><g fill-rule="nonzero"><use fill="#000" filter="url(#b)" xlink:href="#a"/><use fill="url(#c)" xlink:href="#a"/></g><path d="M3 125h636a3 3 0 013 3v296a3 3 0 01-3 3H3a3 3 0 01-3-3V128a3 3 0 013-3z" fill="#2D2E40" fill-rule="nonzero" mask="url(#d)"/><rect fill="#FFF" fill-rule="nonzero" mask="url(#d)" x="90.523" y="47.709" width="135.785" height="137.165" rx="3"/><ellipse fill="#2D2E40" mask="url(#d)" cx="158.416" cy="116.888" rx="39.306" ry="39.36"/><rect fill="#FFF" fill-rule="nonzero" mask="url(#d)" x="248.939" y="47.709" width="302.538" height="325.617" rx="3"/></g><path d="M209 284c47.125-73.367 81.977-113.013 104.557-118.938 33.87-8.886 23.765 83.14 72.535 72.473 48.77-10.666 54.716-103.974 91.603-108.37 36.887-4.397 56.402 80.946 72.515 88.81 10.742 5.241 24.005-6.094 39.79-34.007" stroke="url(#e)" stroke-width="8" stroke-linecap="round" transform="translate(0 242)"/></g></svg>    </div> -->
+  </div>
+  
+
+  </section>
+  <!-- First Section end-->
+
+  <!-- Second Section Start-->
+  <section class="mobiles-section flex flex-jc-sb flex-ai-c">
+    <div class="mobiles-section__left">
+    </div>
+    <div class="mobiles-section__right">
+      <h3>State of the Art Infrastructure</h3>
+      <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+    </div>
+  </section>
+  <!-- Second Section end-->
+
+  <!-- Third Section Start-->
+  <section class="laptop-section flex flex-jc-sb flex-ai-c">
+    <div class="laptop-section__left">
+    </div>
+    <div class="laptop-section__right">
+      <h3>
+        Free, open, simple
+      </h3>
+      <p>
+        Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+      </p>
+      <h3>
+        Powerful tooling
+      </h3>
+      <p>
+        Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+  capable of producing even the most complicated sites.
+      </p>
+      </div>
+  </section>
+  <!-- Third Section end-->
+
+
+
+  <!--  
+
+
+  
+
+
+  Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+  
+  Contact
+  Newsletter
+  LinkedIn
+  -->
+
+  <script src="/app/js/script.js"></script>
+</body>
+
+<footer class="footer flex">
+<div><p>Blogr</p></div>
+<div>
+  <ul class="footer__desriptiom">
+    <li><h4>Product</h4></li>
+    <li><a href="/">Overview</a></li>
+    <li><a href="/">Pricing</a></li>
+    <li><a href="/">Marketplace</a></li>
+    <li><a href="/">Features</a></li>
+    <li><a href="/">Integrations</a></li>
+  </ul>
+</div>
+<div>
+  <ul class="footer__desriptiom">
+    <li><h4>Company</h4></li>
+    <li><a href="/">About</a></li>
+    <li><a href="/">Team</a></li>
+    <li><a href="/">Blog</a></li>
+    <li><a href="/">Careers</a></li>
+  </ul>
+</div>
+<div>
+  <ul class="footer__desriptiom">
+    <li><h4>Connect</h4></li>
+    <li><a href="/">Contact</a></li>
+    <li><a href="/">Newsletter</a></li>
+    <li><a href="/">LinkedIn</a></li>
+  </ul>
+</div>
+</footer>
+</html>

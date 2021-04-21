@@ -1,0 +1,85 @@
+.main-section {
+    padding-top: 10rem;
+    padding-left: 10rem;
+    
+    h2 {
+        display: block;
+        font-size: 2.5rem;
+        color: $veryDarkBlue;
+        text-align: center;
+        padding-bottom: 7.5rem;
+    }
+
+    h3 {
+        color: $veryDarkBlue;
+        font-size: $headings;
+        padding-bottom: 2.5rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-family: $ubuntu;
+        color: #939496;
+        line-height: 2;
+        padding-bottom: 5.625rem;
+    }
+    
+    &__right {
+    height: 600px;
+    min-width: 505px;
+    background-image: url(/images/illustration-editor-desktop.svg);
+    background-size: 629px;
+    background-position: -46% 59%;
+    background-repeat: no-repeat;
+
+    }
+
+    &__left {
+        padding-right: 10rem;
+    }
+
+
+    @include breakpoint-up(large) {
+        padding-left: 4.75rem;
+        
+
+        h2 {
+            font-size: 2.5rem;
+            padding-bottom: 4rem;
+            padding-right: 3rem;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__left {
+            padding-top: 7rem;
+            padding-right: 3rem;
+            order: 2;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        &__right {
+            background-image: url(/images/illustration-editor-mobile.svg);
+            background-size: 486px;
+            background-position: -138% 0%;
+            background-repeat: no-repeat;
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1;
+            height: 390px;
+            width: 500px;
+        }
+    }
+}
+

@@ -1,0 +1,709 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: "Overpass", sans-serif;
+  font-size: 1rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 64em) {
+  .hide-for-destop {
+    display: none;
+  }
+}
+
+@media (min-width: 64.0625em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+.mobile-left-right {
+  padding-left: 4.75rem;
+  padding-right: 3.5rem;
+}
+
+.header {
+  background-color: #ff525d;
+  background-image: url(/images/bg-pattern-intro.svg);
+  background-position: -15px center;
+  min-height: 37.5em;
+  border-radius: 0 0 0 100px;
+}
+
+.header__nav {
+  padding: 3.875em 10em 5.75em 10em;
+}
+
+.header__nav ul {
+  padding: 0;
+}
+
+.header__nav ul li {
+  color: white;
+}
+
+.header__nav-left ul li a {
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.header__nav-left ul > li > a:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  bottom: -5px;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.header__nav-left ul > li > a:hover:after {
+  opacity: 1;
+}
+
+.header__nav-left ul > li > i {
+  padding-left: 0.5rem;
+}
+
+.header__nav-left ul > li:not(:last-child) {
+  padding-right: 2rem;
+}
+
+.header__nav-left ul > li > p {
+  display: inline;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-right: 3.75rem;
+  margin: 0;
+}
+
+.header .d-menu-icon {
+  -webkit-transition: -webkit-transform .3s linear;
+  transition: -webkit-transform .3s linear;
+  transition: transform .3s linear;
+  transition: transform .3s linear, -webkit-transform .3s linear;
+  cursor: pointer;
+}
+
+.header .d-menu-icon-rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header__btn-sign, .hero__btn-start, .hero__btn-more {
+  color: #ff525d;
+  background-color: white;
+  padding: 1.125rem 2.5rem;
+  font-weight: 600;
+  border-radius: 100px;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.header__btn-sign:hover, .hero__btn-start:hover, .hero__btn-more:hover {
+  background-color: #ff7a85;
+  color: white;
+}
+
+.header__btn-log {
+  color: white;
+  padding-right: 1.875rem;
+}
+
+.header .dropdown_menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.header .dropdown_menu > li > a > i {
+  -webkit-transform: rotateX(90);
+          transform: rotateX(90);
+}
+
+.header .submenu {
+  margin-top: 1.5625rem;
+  border-radius: 20px;
+  background-color: ivory;
+  position: absolute;
+  left: -38px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-animation: fade-out .3s ease-in-out forwards;
+          animation: fade-out .3s ease-in-out forwards;
+}
+
+.header .submenu li > a {
+  display: block;
+  line-height: 2.5;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.header .submenu li:first-child {
+  padding-top: 2rem;
+}
+
+.header .submenu li:last-child {
+  padding-bottom: 2rem;
+}
+
+.header .submenu li a:hover {
+  font-weight: 500;
+}
+
+.header .submenuShow {
+  -webkit-animation: fade-in .3s ease-in-out forwards;
+          animation: fade-in .3s ease-in-out forwards;
+  visibility: visible;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.hero {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3.125rem;
+}
+
+.hero p {
+  color: white;
+  margin: 1.875rem 0 4.375rem 0;
+}
+
+.hero__btn-start {
+  margin-right: 1rem;
+}
+
+.hero__btn-more {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.hero__btn-more:hover {
+  background-color: white;
+  color: #ff525d;
+}
+
+@media (max-width: 64em) {
+  .hero h1 {
+    font-size: 2.5rem;
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    text-align: center;
+  }
+}
+
+.mobile-menu__top {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  padding: 6.25rem 5.75rem 2rem 5.75rem;
+}
+
+.mobile-menu__dropdown {
+  position: absolute;
+  background-color: white;
+  text-align: start;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 1.375rem 4.375rem 2.375rem 4.375rem;
+  border-radius: 10px;
+  visibility: hidden;
+  min-width: 28.625rem;
+  -webkit-animation: mobile-fade-out 0.3s linear forwards;
+          animation: mobile-fade-out 0.3s linear forwards;
+}
+
+.mobile-menu__dropdown ul {
+  padding: 0;
+  color: #1f3f5b;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+  margin: 0;
+}
+
+.mobile-menu__dropdown a {
+  display: block;
+  text-align: center;
+}
+
+.mobile-menu__dropdown i {
+  padding-left: 1rem;
+}
+
+.mobile-menu__dropdown span {
+  display: block;
+  border-bottom: 2px solid #efeff1;
+  width: 100%;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mobile-menu .mobile-menu-show {
+  visibility: visible;
+  -webkit-animation: mobile-fade-in .2s linear forwards;
+          animation: mobile-fade-in .2s linear forwards;
+}
+
+@-webkit-keyframes mobile-fade-in {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mobile-fade-in {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes mobile-fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes mobile-fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.mobile-menu__submenu {
+  background-color: #efeff1;
+  padding: 5rem;
+  border-radius: 10px;
+  display: none;
+}
+
+.mobile-menu__submenu li {
+  font-size: 1.2rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.mobile-menu__submenu li a {
+  display: block;
+  text-align: center;
+}
+
+.mobile-menu .mobile-submenu-show {
+  display: block;
+  -webkit-animation: mobile-fade-in .2s linear forwards;
+          animation: mobile-fade-in .2s linear forwards;
+}
+
+@keyframes mobile-fade-in {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mobile-fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.mobile-menu__btn-sign {
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#ff856e), to(#ff485a));
+  background: linear-gradient(to right, #ff856e, #ff485a);
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 500px;
+  font-family: "Ubuntu", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mobile-menu .for-position {
+  position: relative;
+}
+
+.main-section {
+  padding-top: 10rem;
+  padding-left: 10rem;
+}
+
+.main-section h2 {
+  display: block;
+  font-size: 2.5rem;
+  color: #1f3f5b;
+  text-align: center;
+  padding-bottom: 7.5rem;
+}
+
+.main-section h3 {
+  color: #1f3f5b;
+  font-size: 1.875rem;
+  padding-bottom: 2.5rem;
+  font-weight: 600;
+}
+
+.main-section p {
+  font-family: "Ubuntu", sans-serif;
+  color: #939496;
+  line-height: 2;
+  padding-bottom: 5.625rem;
+}
+
+.main-section__right {
+  height: 600px;
+  min-width: 505px;
+  background-image: url(/images/illustration-editor-desktop.svg);
+  background-size: 629px;
+  background-position: -46% 59%;
+  background-repeat: no-repeat;
+}
+
+.main-section__left {
+  padding-right: 10rem;
+}
+
+@media (max-width: 64em) {
+  .main-section {
+    padding-left: 4.75rem;
+  }
+  .main-section h2 {
+    font-size: 2.5rem;
+    padding-bottom: 4rem;
+    padding-right: 3rem;
+  }
+  .main-section__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .main-section__left {
+    padding-top: 7rem;
+    padding-right: 3rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .main-section__left h3 {
+    font-size: 2rem;
+  }
+  .main-section__left p {
+    font-size: 1.1rem;
+  }
+  .main-section__right {
+    background-image: url(/images/illustration-editor-mobile.svg);
+    background-size: 486px;
+    background-position: -138% 0%;
+    background-repeat: no-repeat;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    height: 390px;
+    width: 500px;
+  }
+}
+
+.mobiles-section {
+  background: -webkit-gradient(linear, left top, right top, from(#2f3044), to(#3d4063));
+  background: linear-gradient(to right, #2f3044, #3d4063);
+  margin-top: 5rem;
+  border-radius: 0 100px 0 100px;
+}
+
+.mobiles-section__left {
+  min-width: 500px;
+  height: 540px;
+  background-image: url(/images/illustration-phones.svg), url(/images/bg-pattern-circles.svg);
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  background-position: 57% 25%, 34% 51%, 14% 35%;
+  margin-left: 4rem;
+}
+
+.mobiles-section__right {
+  padding-right: 10rem;
+  padding-left: 5rem;
+}
+
+.mobiles-section__right h3 {
+  color: white;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.mobiles-section__right p {
+  color: white;
+  line-height: 2;
+}
+
+@media (max-width: 64em) {
+  .mobiles-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mobiles-section__right {
+    display: block;
+    padding: 1rem 3rem 4rem 4.75rem;
+    text-align: center;
+  }
+  .mobiles-section__left {
+    background-position: center center;
+    width: 500px;
+    height: 500px;
+    margin: 0;
+  }
+}
+
+.laptop-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border-radius: 0 100px 0 100px;
+}
+
+.laptop-section__left {
+  min-width: 500px;
+  height: 540px;
+  background-image: url(/images/illustration-laptop-desktop.svg);
+  background-size: 660px;
+  background-repeat: no-repeat;
+  background-position: 57% 25%, 34% 51%, 14% 35%;
+}
+
+.laptop-section__right {
+  padding-right: 10rem;
+  padding-left: 5rem;
+}
+
+.laptop-section__right h3 {
+  color: #1f3f5b;
+  font-size: 1.875rem;
+  padding-bottom: 2rem;
+}
+
+.laptop-section__right p {
+  color: #939496;
+  line-height: 2;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 64em) {
+  .laptop-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .laptop-section__right {
+    display: block;
+    padding: 1rem 3rem 4rem 4.75rem;
+    text-align: center;
+  }
+  .laptop-section__left {
+    background-image: url(/images/illustration-laptop-mobile.svg);
+    background-position: center;
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.footer {
+  background-color: #25252d;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 4.375rem 20rem 5rem 7rem;
+  border-radius: 0 100px 0 0;
+}
+
+.footer ul {
+  margin: 0;
+  padding-left: 11.5rem;
+}
+
+.footer ul a {
+  color: #c8c8cb;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.9rem;
+  line-height: 2.2;
+}
+
+.footer ul h4 {
+  padding-bottom: 2.5rem;
+}
+
+.footer p {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 64em) {
+  .footer {
+    padding: 2rem 0 2rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer ul {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+  .footer ul h4 {
+    padding: 2rem 0 2rem 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

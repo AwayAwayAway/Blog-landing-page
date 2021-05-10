@@ -1,344 +1,354 @@
 .header {
-    background-color: $lightRed;
-    background-image: url(/images/bg-pattern-intro.svg);
-    background-position: -15px center;
-    min-height: 37.5em;
-    border-radius: 0 0 0 100px;
+  background-color: $lightRed;
+  background-image: url(/images/bg-pattern-intro.svg);
+  background-position: -15px center;
+  min-height: 37.5em;
+  border-radius: 0 0 0 100px;
 
-    // Destop navigation
-    
-    &__nav {
-       padding: 3.875em 10em 5.75em 10em;
-      
-       ul {
-        padding: 0;
-        }
+  // Destop navigation
 
-        ul li {
-        color: white;
-        }
+  &__nav {
+    padding: 3.875em 10em 5.75em 10em;
+
+    ul {
+      padding: 0;
     }
 
-    &__nav-left  {
-        ul li a {
-        color: $white;
-        position: relative;
-        cursor: pointer;
-        }
-    
-        ul > li > a:after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        position: absolute;
-        background-color: white;
-        bottom: -5px;
-        left: 0;
-        opacity: 0;
-        transition: all .3s ease-in-out;
-        }
+    ul li {
+      color: white;
+    }
+  }
 
-        ul > li > a:hover:after {
-        opacity: 1;
-        }
-
-        ul > li > i {
-        padding-left: 0.5rem;
-        }
-
-        ul > li:not(:last-child) {
-        padding-right: 2rem;
-        }
-
-        ul > li > p {
-        display: inline;
-        font-size: 2.5rem;
-        font-weight: 700;
-        padding-right: 3.75rem;
-        margin: 0;
-        }
+  &__nav-left {
+    ul li a {
+      color: $white;
+      position: relative;
+      cursor: pointer;
     }
 
-    // SVG ANIMATION STYLE
+    ul > li > a:after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background-color: white;
+      bottom: -5px;
+      left: 0;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
 
-    .d-menu-icon {
-    transition: transform .3s linear;
+    ul > li > a:hover:after {
+      opacity: 1;
+    }
+
+    ul > li > i {
+      padding-left: 0.5rem;
+    }
+
+    ul > li:not(:last-child) {
+      padding-right: 2rem;
+    }
+
+    ul > li > p {
+      display: inline;
+      font-size: 2.5rem;
+      font-weight: 700;
+      padding-right: 3.75rem;
+      margin: 0;
+    }
+  }
+
+  // SVG ANIMATION STYLE
+
+  .d-menu-icon {
+    transition: transform 0.3s linear;
     cursor: pointer;
-    }
+  }
 
-    .d-menu-icon-rotate {
+  .d-menu-icon-rotate {
     transform: rotate(180deg);
+  }
+
+  &__btn-sign {
+    color: $lightRed;
+    background-color: $white;
+    padding: 1.125rem 2.5rem;
+    font-weight: 600;
+    border-radius: 100px;
+    font-family: $ubuntu;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__btn-sign:hover {
+    background-color: $veryLightRed;
+    color: $white;
+  }
+
+  &__btn-log {
+    color: $white;
+    padding-right: 1.875rem;
+  }
+
+  // Destop DROPDOWN MENU
+
+  .dropdown_menu > li {
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown_menu > li > a > i {
+    transform: rotateX(90);
+  }
+
+  .submenu {
+    margin-top: 1.5625rem;
+    border-radius: 20px;
+    background-color: ivory;
+    position: absolute;
+    left: -38px;
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-out 0.3s ease-in-out forwards;
+
+    li > a {
+      display: block;
+      line-height: 2.5;
+      font-family: $ubuntu;
+      font-weight: 400;
+      color: #000000;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
 
-    &__btn-sign {
-        color: $lightRed;
-        background-color: $white;
-        padding: 1.125rem 2.5rem;
-        font-weight: 600;
-        border-radius: 100px;
-        font-family: $ubuntu;
-        transition: all .3s ease-in-out;
-    }
-        
-    &__btn-sign:hover {
-        background-color: $veryLightRed;
-        color: $white;
+    li:first-child {
+      padding-top: 2rem;
     }
 
-    &__btn-log {
-        color: $white;
-        padding-right: 1.875rem;
+    li:last-child {
+      padding-bottom: 2rem;
     }
 
-// Destop DROPDOWN MENU
-
-    .dropdown_menu > li {
-        display: inline-block;
-        position: relative;
+    li a:hover {
+      font-weight: 500;
     }
-    .dropdown_menu > li > a > i{
-        transform: rotateX(90);
+  }
+
+  .submenuShow {
+    animation: fade-in 0.3s ease-in-out forwards;
+    visibility: visible;
+  }
+
+  @keyframes fade-in {
+    0% {
+      visibility: visible;
+      opacity: 0;
     }
-    
-
-    .submenu {
-        margin-top: 1.5625rem;
-        border-radius: 20px;
-        background-color: ivory;
-        position: absolute;
-        left: -38px;
-        opacity: 0;
-        visibility: hidden;
-        animation: fade-out .3s ease-in-out forwards;
-
-        li > a {
-        display: block;
-        line-height: 2.5;
-        font-family: $ubuntu;
-        font-weight: 400;
-        color: #000000;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        }
-
-        li:first-child {
-        padding-top: 2rem;
-        }
-
-        li:last-child {
-        padding-bottom: 2rem;
-        }
-
-        li a:hover {
-        font-weight: 500;
-        }
+    100% {
+      opacity: 1;
     }
-
-    .submenuShow {
-            animation: fade-in .3s ease-in-out forwards;
-            visibility: visible;
-            
-        }
-
-        @keyframes fade-in {
-            0% {
-                visibility: visible;
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            } 
-        }
-        @keyframes fade-out {
-            0% {
-                visibility: visible;
-                opacity: 1;
-            }
-            100% {
-                visibility: hidden;
-                opacity: 0;
-            } 
-        }
+  }
+  @keyframes fade-out {
+    0% {
+      visibility: visible;
+      opacity: 0;
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
 }
 
 // HERO
 
 .hero {
-    flex-direction: column;
+  flex-direction: column;
 
+  h1 {
+    color: $white;
+    font-size: 3.125rem;
+  }
+
+  p {
+    color: $white;
+    margin: 1.875rem 0 4.375rem 0;
+  }
+
+  &__btn-start {
+    @extend .header__btn-sign;
+    margin-right: 1rem;
+  }
+
+  &__btn-more {
+    @extend .header__btn-sign;
+    border: 1px solid white;
+    background-color: transparent;
+    color: $white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__btn-more:hover {
+    background-color: $white;
+    color: $lightRed;
+  }
+
+  @include breakpoint-up(large) {
     h1 {
-        color: $white;
-        font-size: 3.125rem;
+      font-size: 2.5rem;
+      padding-top: 3rem;
+      padding-right: 3rem;
+      padding-left: 3rem;
+      text-align: center;
     }
-
-    p {
-        color: $white;
-        margin: 1.875rem 0 4.375rem 0;
-    }
-
-    &__btn-start {
-        @extend .header__btn-sign;
-        margin-right: 1rem;
-    }
-
-    &__btn-more {
-        @extend .header__btn-sign;
-        border: 1px solid white;
-        background-color: transparent;
-        color: $white;
-        transition: all .3s ease-in-out;
-    }
-
-    &__btn-more:hover {
-        background-color: $white;
-        color: $lightRed;
-    }
-    
-    @include breakpoint-up(large) {
-        h1 {
-            font-size: 2.5rem;
-            padding-top: 3rem;
-            padding-right: 3rem;
-            padding-left: 3rem;
-            text-align: center;
-        }
-        
-    }
+  }
 }
 
 // Mobile menu and submenu navigatiuon
-
+#mobile-toggle {
+    cursor: pointer;
+  }
 
 .mobile-menu {
-    &__top {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: $white;
-        padding: 6.25rem 5.75rem 2rem 5.75rem;
-    }
-    
-    &__dropdown {
-        position: absolute;
-        background-color: $white;
-        text-align: start;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 1.375rem 4.375rem 2.375rem 4.375rem;
-        border-radius: 10px;
-        visibility: hidden;
-        min-width: 28.625rem;
-        animation: mobile-fade-out 0.3s linear forwards;
+  
+  &__top {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $white;
+    padding: 6.25rem 5.75rem 2rem 5.75rem;
+  }
 
-        ul {
-            padding: 0;
-            color: $veryDarkBlue;
-            font-family: $ubuntu;
-            font-size: 1.5rem;
-            line-height: 2;
-            margin: 0;
-        }
+  &__dropdown {
+    position: absolute;
+    background-color: $white;
+    text-align: start;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.375rem 4.375rem 2.375rem 4.375rem;
+    border-radius: 10px;
+    visibility: hidden;
+    min-width: 28.625rem;
+    animation: mobile-fade-out 0.3s linear forwards;
 
-        a {
-            display: block;
-            text-align: center;
-        }
-
-        i {
-            padding-left: 1rem;
-        }
-        
-        // horizontal Line
-
-        span {
-            display: block;
-            border-bottom: 2px solid #efeff1;
-            width: 100%;
-            padding-top: 2rem;
-            margin-bottom: 2rem;
-        }   
+    ul {
+      padding: 0;
+      color: $veryDarkBlue;
+      font-family: $ubuntu;
+      font-size: 1.5rem;
+      line-height: 2;
+      margin: 0;
     }
 
-    .mobile-menu-show {
-        visibility: visible;
-        animation: mobile-fade-in .2s linear forwards;
-    }
-            
-    @keyframes mobile-fade-in {
-        0% {
-            visibility: visible;
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        } 
-    }
-    @keyframes mobile-fade-out {
-        0% {
-            visibility: visible;
-            opacity: 1;
-        }
-        100% {
-            visibility: hidden;
-            opacity: 0;
-        } 
+    a {
+      display: block;
+      text-align: center;
     }
 
-    &__submenu {
-        background-color: #efeff1;
-        padding: 5rem;
-        border-radius: 10px;
-        display: none;
-
-        li {
-            font-size: 1.2rem; 
-            padding-left: 7rem;
-            padding-right: 7rem;
-            
-        }
-
-        li a {
-            display: block;
-            text-align: center;
-        }
+    i {
+      padding-left: 1rem;
     }
 
-    .mobile-submenu-show {
-        display: block;
-        animation: mobile-fade-in .2s linear forwards;
+    // horizontal Line
+
+    span {
+      display: block;
+      border-bottom: 2px solid #efeff1;
+      width: 100%;
+      padding-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .mobile-menu-buttons {
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .mobile-menu-show {
+    visibility: visible;
+    animation: mobile-fade-in 0.2s linear forwards;
+  }
+
+  @keyframes mobile-fade-in {
+    0% {
+      visibility: visible;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes mobile-fade-out {
+    0% {
+      visibility: visible;
+      opacity: 0;
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__submenu {
+    background-color: #efeff1;
+    padding: 5rem;
+    border-radius: 10px;
+    display: none;
+
+    li {
+      font-size: 1.2rem;
+      padding-left: 7rem;
+      padding-right: 7rem;
     }
 
-    @keyframes mobile-fade-in {
-        0% {
-            visibility: visible;
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        } 
+    li a {
+      display: block;
+      text-align: center;
     }
-    @keyframes mobile-fade-out {
-        0% {
-            visibility: visible;
-            opacity: 1;
-        }
-        100% {
-            visibility: hidden;
-            opacity: 0;
-        } 
-    }
+  }
 
-    &__btn-sign {
-        color: $white;
-        background: linear-gradient(to right, #ff856e, #ff485a);
-        padding: 0.5rem;
-        font-weight: 600;
-        border-radius: 500px;
-        font-family: $ubuntu;
-        width: 80%;
-        margin: 0 auto;
+  .mobile-submenu-show {
+    display: block;
+    animation: mobile-fade-in 0.2s linear forwards;
+  }
+
+  @keyframes mobile-fade-in {
+    0% {
+      visibility: visible;
+      opacity: 0;
     }
-    // make mobile menu postion absolute
-    .for-position {
-        position: relative;
+    100% {
+      opacity: 1;
     }
+  }
+
+  @keyframes mobile-fade-out {
+    0% {
+      visibility: visible;
+      opacity: 0;
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__btn-sign {
+    color: $white;
+    background: linear-gradient(to right, #ff856e, #ff485a);
+    padding: 0.5rem;
+    font-weight: 600;
+    border-radius: 500px;
+    font-family: $ubuntu;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  // make mobile menu postion absolute
+  .for-position {
+    position: relative;
+  }
 }

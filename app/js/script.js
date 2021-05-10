@@ -90,13 +90,14 @@ console.log (mobileMenuButtons)
 console.log (mobileSubmenu)
 
 
-mobileToggle.addEventListener('touchstart', () => {
-    mobileMenu.classList.toggle("mobile-menu-show");
+mobileToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('mobile-menu-show');
 })
 
 mobileMenuButtons.forEach ( (mBtn) => {
-    mBtn.addEventListener('touchstart', (m) => {
+    mBtn.addEventListener('click', (m) => {
         const submenuTarget = m.currentTarget;
+        console.log(submenuTarget);
         if (submenuTarget == mobileMenuButtons[0]) {
             mobileSubmenu[0].classList.toggle("mobile-submenu-show")
         } 

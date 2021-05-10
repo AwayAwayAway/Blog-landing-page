@@ -109,8 +109,8 @@ body {
   bottom: -5px;
   left: 0;
   opacity: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .header__nav-left ul > li > a:hover:after {
@@ -134,10 +134,10 @@ body {
 }
 
 .header .d-menu-icon {
-  -webkit-transition: -webkit-transform .3s linear;
-  transition: -webkit-transform .3s linear;
-  transition: transform .3s linear;
-  transition: transform .3s linear, -webkit-transform .3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
   cursor: pointer;
 }
 
@@ -153,8 +153,8 @@ body {
   font-weight: 600;
   border-radius: 100px;
   font-family: "Ubuntu", sans-serif;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .header__btn-sign:hover, .hero__btn-start:hover, .hero__btn-more:hover {
@@ -185,8 +185,8 @@ body {
   left: -38px;
   opacity: 0;
   visibility: hidden;
-  -webkit-animation: fade-out .3s ease-in-out forwards;
-          animation: fade-out .3s ease-in-out forwards;
+  -webkit-animation: fade-out 0.3s ease-in-out forwards;
+          animation: fade-out 0.3s ease-in-out forwards;
 }
 
 .header .submenu li > a {
@@ -212,8 +212,8 @@ body {
 }
 
 .header .submenuShow {
-  -webkit-animation: fade-in .3s ease-in-out forwards;
-          animation: fade-in .3s ease-in-out forwards;
+  -webkit-animation: fade-in 0.3s ease-in-out forwards;
+          animation: fade-in 0.3s ease-in-out forwards;
   visibility: visible;
 }
 
@@ -240,7 +240,7 @@ body {
 @-webkit-keyframes fade-out {
   0% {
     visibility: visible;
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     visibility: hidden;
@@ -251,7 +251,7 @@ body {
 @keyframes fade-out {
   0% {
     visibility: visible;
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     visibility: hidden;
@@ -284,8 +284,8 @@ body {
   border: 1px solid white;
   background-color: transparent;
   color: white;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero__btn-more:hover {
@@ -301,6 +301,10 @@ body {
     padding-left: 3rem;
     text-align: center;
   }
+}
+
+#mobile-toggle {
+  cursor: pointer;
 }
 
 .mobile-menu__top {
@@ -351,10 +355,18 @@ body {
   margin-bottom: 2rem;
 }
 
+.mobile-menu .mobile-menu-buttons {
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+
 .mobile-menu .mobile-menu-show {
   visibility: visible;
-  -webkit-animation: mobile-fade-in .2s linear forwards;
-          animation: mobile-fade-in .2s linear forwards;
+  -webkit-animation: mobile-fade-in 0.2s linear forwards;
+          animation: mobile-fade-in 0.2s linear forwards;
 }
 
 @-webkit-keyframes mobile-fade-in {
@@ -380,7 +392,7 @@ body {
 @-webkit-keyframes mobile-fade-out {
   0% {
     visibility: visible;
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     visibility: hidden;
@@ -391,7 +403,7 @@ body {
 @keyframes mobile-fade-out {
   0% {
     visibility: visible;
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     visibility: hidden;
@@ -419,8 +431,8 @@ body {
 
 .mobile-menu .mobile-submenu-show {
   display: block;
-  -webkit-animation: mobile-fade-in .2s linear forwards;
-          animation: mobile-fade-in .2s linear forwards;
+  -webkit-animation: mobile-fade-in 0.2s linear forwards;
+          animation: mobile-fade-in 0.2s linear forwards;
 }
 
 @keyframes mobile-fade-in {
@@ -436,7 +448,7 @@ body {
 @keyframes mobile-fade-out {
   0% {
     visibility: visible;
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     visibility: hidden;

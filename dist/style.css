@@ -185,8 +185,6 @@ body {
   left: -38px;
   opacity: 0;
   visibility: hidden;
-  -webkit-animation: fade-out 0.3s ease-in-out forwards;
-          animation: fade-out 0.3s ease-in-out forwards;
 }
 
 .header .submenu li > a {
@@ -234,28 +232,6 @@ body {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes fade-out {
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
   }
 }
 
@@ -325,8 +301,6 @@ body {
   border-radius: 10px;
   visibility: hidden;
   min-width: 28.625rem;
-  -webkit-animation: mobile-fade-out 0.3s linear forwards;
-          animation: mobile-fade-out 0.3s linear forwards;
 }
 
 .mobile-menu__dropdown ul {
@@ -389,28 +363,6 @@ body {
   }
 }
 
-@-webkit-keyframes mobile-fade-out {
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
-@keyframes mobile-fade-out {
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
 .mobile-menu__submenu {
   background-color: #efeff1;
   padding: 5rem;
@@ -433,27 +385,6 @@ body {
   display: block;
   -webkit-animation: mobile-fade-in 0.2s linear forwards;
           animation: mobile-fade-in 0.2s linear forwards;
-}
-
-@keyframes mobile-fade-in {
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes mobile-fade-out {
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
 }
 
 .mobile-menu__btn-sign {

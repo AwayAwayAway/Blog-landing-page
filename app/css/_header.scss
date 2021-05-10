@@ -108,7 +108,7 @@
     left: -38px;
     opacity: 0;
     visibility: hidden;
-    animation: fade-out 0.3s ease-in-out forwards;
+    // animation: fade-out 0.3s ease-in-out forwards;
 
     li > a {
       display: block;
@@ -147,16 +147,18 @@
       opacity: 1;
     }
   }
-  @keyframes fade-out {
-    0% {
-      visibility: visible;
-      opacity: 0;
-    }
-    100% {
-      visibility: hidden;
-      opacity: 0;
-    }
-  }
+
+  // @keyframes fade-out {
+  //   0% {
+  //     visibility: visible;
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     visibility: hidden;
+  //     opacity: 0;
+  //   }
+  // }
+
 }
 
 // HERO
@@ -227,7 +229,7 @@
     border-radius: 10px;
     visibility: hidden;
     min-width: 28.625rem;
-    animation: mobile-fade-out 0.3s linear forwards;
+    // animation: mobile-fade-out 0.3s linear forwards;
 
     ul {
       padding: 0;
@@ -281,16 +283,16 @@
     }
   }
   
-  @keyframes mobile-fade-out {
-    0% {
-      visibility: visible;
-      opacity: 0;
-    }
-    100% {
-      visibility: hidden;
-      opacity: 0;
-    }
-  }
+  // @keyframes mobile-fade-out {
+  //   0% {
+  //     visibility: visible;
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     visibility: hidden;
+  //     opacity: 0;
+  //   }
+  // }
 
   &__submenu {
     background-color: #efeff1;
@@ -313,27 +315,6 @@
   .mobile-submenu-show {
     display: block;
     animation: mobile-fade-in 0.2s linear forwards;
-  }
-
-  @keyframes mobile-fade-in {
-    0% {
-      visibility: visible;
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes mobile-fade-out {
-    0% {
-      visibility: visible;
-      opacity: 0;
-    }
-    100% {
-      visibility: hidden;
-      opacity: 0;
-    }
   }
 
   &__btn-sign {

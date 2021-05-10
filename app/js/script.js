@@ -74,9 +74,6 @@ body.addEventListener('scroll', () => {
     destopIcon[2].classList.remove('d-menu-icon-rotate'); 
 })
 
-
-
-
 // mobile menu JS
 
 const mobileToggle = document.querySelector("#mobile-toggle")
